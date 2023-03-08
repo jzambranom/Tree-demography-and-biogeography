@@ -1,0 +1,53 @@
+library(maptools)
+library(rgdal)
+library(raster)
+
+#read in shapefiles of two species to be compared
+sp1 = readShapePoly("sp1.shp")
+sp2 = readShapePoly("sp2.shp")
+
+#make a background raster template
+ext <-  extent (-160, -50, 24, 70)
+xy <- abs(apply(as.matrix(bbox(ext)), 1, diff))
+n <- 5
+r <- raster(ext, ncol=xy[1]*n, nrow=xy[2]*n)
+
+#convert shapefiles of range maps to raster
+sp1.raster = rasterize(sp1,r)
+sp2.raster= rasterize(sp2,r)
+
+#overlay the two maps
+overlay.of.two = one + two
+
+#calculate the range size of each species by tallying cells
+range.species.one = cellStats(sp1.raster==1,"sum")
+range.species.two = cellStats(sp2.raster==1,"sum")
+
+#calculate range overlap
+number.of.overlapping.cells = cellStats(overlay.of.two==2,"sum")
+
+#proportion of range overlap for each species
+number.of.overlapping.cells / range.species.one
+number.of.overlapping.cells / range.species.two
+
+
+
+
+
+library(sf) 
+
+#read in range shapefile
+sp1 = st_read("sp1.shp")
+
+#extract upper and lower latitudes of range
+lowest.latitude =  st_bbox(sp1)$ymin
+highest.latitude =  st_bbox(sp1)$ymax
+
+#slice latitudinal range of species into 1000 equal slices
+seqq = seq(from = lowest.latitude, to = highest.latitude,length.out=1000)
+
+#the forest plot latitude
+plot.latitude = 45.5698
+
+#rank where the plot is in the latitudinal range of the species
+range.quantile = rank(c(plot.latitude, seqq))[1]/1000
