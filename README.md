@@ -6,7 +6,7 @@ DOI of paper:
 
 Outline
 
-This repository contains the final datasets and scripts of the above-mentioned paper. It can recreate the tree survival and growth models including the degree of geographic range overlap and the position of the local community within species ranges, and trait information for tree species from the Wabikon Forest Dynamics Plot located in Wisconsin.
+This repository contains the final datasets and scripts of the above-mentioned paper for an R project.. It can recreate the tree survival and growth models including the degree of geographic range overlap and the position of the local community within species ranges, and trait information for tree species from the Wabikon Forest Dynamics Plot located in Wisconsin.
 
 The geographic range data used in this study were originally produced by the United States Geological Survey (USGS). The data were removed from the USGS website in 2017, but a web archive of the data can be found here (https://web.archive.org/web/20170127093428/https://gec.cr.usgs.gov/data/little/).  This study used a clone of that web archive that is publicly available in the following GitHub repository (https://github.com/wpetry/USTreeAtlas). The forest plot and soil data used in this study are available via the Smithsonian's ForestGeo data repository (https://forestgeo.si.edu/explore-data).
 
@@ -18,7 +18,7 @@ Running the scripts
 
 •	The script to calculate the degree of geographic range overlap and the position of the local community within species ranges can be found is stored in the Code/.
 
-•	An R subfolder is stored in Code/Demographic models and includes R scripts to run tree survival and growth models. This script follows the methods in the Supplementary Information of the paper.
+•	An R subfolder is stored in Code/Demographic models and includes R scripts to run tree survival and growth models. This script follows the methods in the Supplementary Information of the paper. The folder Data/ contains survival and growth files in a csv. format. 
 
 •	An RJAGS subfolder is stored in Code/Demographic models and contains individual tree survival and growth jags models. These are kept separately and are needed to run hierarchical models including species and individual level data. For instructions in downloading JAGS, see the home page at: https://mcmc-jags.sourceforge.io. We used the lastest JAGS version 4.3.1.
 
