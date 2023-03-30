@@ -13,11 +13,6 @@ load.module("glm")
 #####################################################################
 #Growth data for the Wabikon plot
 data_growth <- read.csv("Data/growth_model_data.csv")
-
-
-#Create column for log transformation of neighborhood range overlap or SES_range_overlap
-data_growth <- mutate(data_growth, logSES_range_overlap = log(SES_range_overlap)) %>%
-  filter(!is.na(logSES_range_overlap)) 
   
 #Create column with species as integer
 data_growth$species <- as.integer(as.factor(data_growth$Species))
