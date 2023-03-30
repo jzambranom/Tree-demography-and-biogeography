@@ -20,7 +20,7 @@ Running the scripts
 
 •	An R subfolder is stored in Code/Demographic models and includes R scripts to run tree survival and growth models. This script follows the methods in the Supplementary Information of the paper.
 
-•	An RJAGS subfolder is stored in Code/Demographic models and contains individual tree survival and growth jags models. These are kept separately and are needed to run hierarchical models including species and individual level data.
+•	An RJAGS subfolder is stored in Code/Demographic models and contains individual tree survival and growth jags models. These are kept separately and are needed to run hierarchical models including species and individual level data. For instructions in downloading JAGS, see the home page at: https://mcmc-jags.sourceforge.io. We used the lastest JAGS version 4.3.1.
 
 •	All of the data needed to run the analyses are stored in Data/.
 
