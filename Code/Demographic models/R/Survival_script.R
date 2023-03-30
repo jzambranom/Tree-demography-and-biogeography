@@ -12,7 +12,7 @@ load.module("glm")
 ####                       Read in data                          ####
 #####################################################################
 #Survival data for the Wabikon plot
-data_survival <- read.csv("Data/survival_model_data.csv")
+data_survival <- read.csv("Data/Demography/survival_model_data.csv")
 
 
 #Create column with species as integer
