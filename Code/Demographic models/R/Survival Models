@@ -12,7 +12,7 @@ load.module("glm")
 ####                       Read in data                          ####
 #####################################################################
 #Survival data for the Wabikon plot
-data_survival <- read.csv("survival_model_data.csv")
+data_survival <- read.csv("Data/survival_model_data.csv")
 
 #Create column for log transformation of neighborhood range overlap or SES_range_overlap
 data_survival <- mutate(data_survival, logSES_range_overlap = log(SES_range_overlap)) %>%
@@ -54,7 +54,7 @@ n.adapt=10000
 n.update=10000
 n.iter=25000
 
-mod1 <- jags.model("survival_geography_traits_JAGS.R", data=data_mod1, n.chains=6, n.adapt=n.adapt)
+mod1 <- jags.model("Code/Demographic models/RJAGS/survival_geography_traits_JAGS.R", data=data_mod1, n.chains=6, n.adapt=n.adapt)
 update(mod1, n.update)
 results_mod1 <- coda.samples(mod1, c("beta.t", "mubeta", "tau", "sigma"), n.iter=n.iter)
 results_dic_mod1 <- dic.samples(mod1, n.iter, "pD") 
@@ -75,7 +75,7 @@ n.adapt=10000
 n.update=10000
 n.iter=25000
 
-mod2 <- jags.model("survival_geography_JAGS.R", data=data_mod2, n.chains=6, n.adapt=n.adapt)
+mod2 <- jags.model("Code/Demographic models/RJAGS/survival_geography_JAGS.R", data=data_mod2, n.chains=6, n.adapt=n.adapt)
 update(mod2, n.update)
 results_mod2 <- coda.samples(mod2, c("beta.t", "mubeta", "tau", "sigma"), n.iter=n.iter)
 results_dic_mod2 <- dic.samples(mod2, n.iter, "pD") 
@@ -97,7 +97,7 @@ n.adapt=10000
 n.update=10000
 n.iter=25000
 
-mod3 <- jags.model("survival_traits_JAGS.R", data=data_mod3, n.chains=6, n.adapt=n.adapt)
+mod3 <- jags.model("Code/Demographic models/RJAGS/survival_traits_JAGS.R", data=data_mod3, n.chains=6, n.adapt=n.adapt)
 update(mod3, n.update)
 results_mod3 <- coda.samples(mod3, c("beta.t", "mubeta", "tau", "sigma"), n.iter=n.iter)
 results_dic_mod3 <- dic.samples(mod3, n.iter, "pD") 
