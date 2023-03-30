@@ -24,7 +24,7 @@ Running the scripts
 
 •	All of the data needed to run the analyses are stored in Data/.
 
-•	Results are stored in Results/Demographic models/. Range overlap results are stored inXXX. Results from survival and growth Bayesian models are stored in /Demography as well as the code to obtain Figure 4.
+•	Results are stored in Results/Demographic models/. Range overlap results are stored inXXX. Results from survival and growth Bayesian models are stored in /Demography as well as the code to obtain Figure 5.
 
 
 The scripts were run in RStudio version 1.2.1335, on macOS Ventura 13.1. We are unsure whether other versions of R will support all of the packages and whether the scripts will run exactly the same.
