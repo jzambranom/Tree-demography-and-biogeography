@@ -9,11 +9,11 @@ library(dplyr) #version 1.0.1.0
 ####                       Read in data                          ####
 #####################################################################
 #Load results of the neighborhood analyses for survival and growth models
-res_tab1 <- read.csv("survival_overlap.csv")
-res_tab2 <- read.csv("growth_overlap.csv")
+res_tab1 <- read.csv("Results/Demographic models/survival_overlap.csv")
+res_tab2 <- read.csv("Results/Demographic models/growth_overlap.csv")
 
 #Load either survival or growth data for the Wabikon plot to create bins for species population position in species range
-data <- read.csv("survival_model_data.csv")
+data <- read.csv("Data/Demography/survival_model_data.csv")
 
 
 ##########################################################################################
