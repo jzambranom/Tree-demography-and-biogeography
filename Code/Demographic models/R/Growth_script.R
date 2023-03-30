@@ -12,7 +12,7 @@ load.module("glm")
 ####                       Read in data                          ####
 #####################################################################
 #Growth data for the Wabikon plot
-data_growth <- read.csv("Data/growth_model_data.csv")
+data_growth <- read.csv("Data/Demography/growth_model_data.csv")
 
 #Create column with species as integer
 data_growth$species <- as.integer(as.factor(data_growth$Species))
