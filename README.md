@@ -18,7 +18,7 @@ Running the scripts
 
 •	The script to calculate the degree of geographic range overlap and the position of the local community within species ranges can be found is stored in the Code/.
 
-•	An R subfolder is stored in Code/Demographic models and includes R scripts to run tree survival and growth models. This script follows the methods in the Supplementary Information of the paper. The folder Data/ contains survival and growth files in a csv. format. 
+•	An R subfolder is stored in Code/Demographic models and includes R scripts to run tree survival and growth models. This script follows the methods in the Supplementary Information of the paper. The folder Data/ contains survival and growth files in a csv. format. Survival data includes: Plot (unique identification), focal (unique number given to each individual tree), Species, status (1- alive and 0-dead), heterospecific density, conspecific density, quantile (species’ population geographic position), SES-range_overlap (standardized effects sizes of neighborhood range overlap), initial_size (DBH of tree in first census), first_trait_axis (trait PC axis 1) and second_trait-axis (trait PC axis 2). Growth data includes the same columns however status is replaced by rgr (relative growth rate).
 
 •	An RJAGS subfolder is stored in Code/Demographic models and contains individual tree survival and growth jags models. These are kept separately and are needed to run hierarchical models including species and individual level data. For instructions in downloading JAGS, see the home page at: https://mcmc-jags.sourceforge.io. We used the lastest JAGS version 4.3.1.
 
