@@ -1,0 +1,8 @@
+par,lo,med,hi
+Range quantile,0.13641,0.38347,0.63925
+Conspecific*Range quantile,-0.23028,-0.13369,-0.04428
+Intercept,1.88808,2.41585,2.94929
+Conspecific density,-0.34208,-0.15785,0.02497
+Heterospecific density,-0.13937,-0.01444,0.1291
+Neighborhood range overlap,-0.44322,-0.0774,0.2967
+Size,0.15365,0.57071,0.98425
