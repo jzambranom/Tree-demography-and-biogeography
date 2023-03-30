@@ -1,11 +1,11 @@
 #####################################################################
 ####              Load libraries             ####
 #####################################################################
-library(MCMCpack)
-library(coda)
-library(dplyr)
-library(rjags)
-library(runjags)
+library(MCMCpack) #version 1.6-0
+library(coda) #version 0.19-4
+library(dplyr) #version 1.0.10
+library(rjags) #version 4-12
+library(runjags) #version 2.2.0-3
 load.module("glm")
 
 #####################################################################
