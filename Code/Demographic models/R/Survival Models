@@ -1,11 +1,11 @@
 #####################################################################
 ####              Load libraries             ####
 #####################################################################
-library(MCMCpack)
-library(coda)
-library(dplyr)
-library(rjags)
-library(runjags)
+library(MCMCpack) #version 1.6-0
+library(coda) #version 0.19-4
+library(dplyr) #version 1.0.10
+library(rjags) #version 4-12
+library(runjags) #version 2.2.0-3
 load.module("glm")
 
 #####################################################################
@@ -14,9 +14,6 @@ load.module("glm")
 #Survival data for the Wabikon plot
 data_survival <- read.csv("Data/survival_model_data.csv")
 
-#Create column for log transformation of neighborhood range overlap or SES_range_overlap
-data_survival <- mutate(data_survival, logSES_range_overlap = log(SES_range_overlap)) %>%
-  filter(!is.na(logSES_range_overlap))
 
 #Create column with species as integer
 data_survival$species <- as.integer(as.factor(data_survival$Species))
