@@ -3,8 +3,8 @@ library(rgdal)
 library(raster)
 
 #read in shapefiles of two species to be compared
-sp1 = readShapePoly("sp1.shp")
-sp2 = readShapePoly("sp2.shp")
+sp1 = readShapePoly("Data/Range_overlap/abiebals.shp")
+sp2 = readShapePoly("Data/Range_overlap/acerspic.shp")
 
 #make a background raster template
 ext <-  extent (-160, -50, 24, 70)
@@ -37,7 +37,7 @@ number.of.overlapping.cells / range.species.two
 library(sf) 
 
 #read in range shapefile
-sp1 = st_read("sp1.shp")
+sp1 = st_read("Data/Range_overlap/abiebals.shp")
 
 #extract upper and lower latitudes of range
 lowest.latitude =  st_bbox(sp1)$ymin
