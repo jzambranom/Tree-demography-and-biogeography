@@ -16,7 +16,7 @@ Running the scripts
 
 •	Open the R project file in the downloaded folder. R projects automatically assigns the root directory to the directory in which the project resides. Consequently, all of the analyses should be runnable without altering paths. These are very easy to open using RStudio.
 
-•	The script to calculate the degree of geographic range overlap and the position of the local community within species ranges can be found is stored in the Code/.
+•	The script to calculate the degree of geographic range overlap and the position of the local community within species ranges can be found is stored in the Code/. Example GIS shapefiles (.shp) that are vector polygons of the geographic ranges of Abies balsamea and Acer spicatum - two species found in the Wabikon Lake Forest Dynamics Plot can be found in Data/Range_overlap folder.
 
 •	An R subfolder is stored in Code/Demographic models and includes R scripts to run tree survival and growth models. This script follows the methods in the Supplementary Information of the paper. The folder Data/ contains survival and growth files in a csv. format. Survival data includes: Plot (unique identification), focal (unique number given to each individual tree), Species, status (1- alive and 0-dead), heterospecific density, conspecific density, quantile (species’ population geographic position), SES-range_overlap (standardized effects sizes of neighborhood range overlap), initial_size (DBH of tree in first census), first_trait_axis (trait PC axis 1) and second_trait-axis (trait PC axis 2). Growth data includes the same columns however status is replaced by rgr (relative growth rate).
 
